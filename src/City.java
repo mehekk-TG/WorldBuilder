@@ -25,10 +25,12 @@ public class City {
             __ += "\nRuler: Player";
         }
         else {
-            __ += "Ruler: Hexcorp";
+            __ += "\nRuler: Hexcorp";
         }
 
         return __;
     }
+
+
 
 }
