@@ -1,16 +1,16 @@
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class Country {
     String name;
     LinkedList<City> cities = new LinkedList<City>();
     LinkedList<Terrain> terrains = new LinkedList<Terrain>();
 
+
+    Scanner scanner = new Scanner(System.in);
+
     public Country(String name) {
         this.name = name;
-
-        cities.add(new City());
-        cities.add(new Base());
-        cities.add(new PlayerBase());
     }
 
     @Override
@@ -21,10 +21,23 @@ public class Country {
             __ += cities.get(i).toString() + "\n\n";
         }
 
+        __ += "Name: " + name + "\n\nTerrains:\n\n";
+
         for (int i = 0; i < terrains.toArray().length; i++) {
             __ += terrains.get(i).toString() + "\n";
         }
 
         return __;
     }
+
+    public void makeCity() {
+        System.out.print("Is this a base?: ");
+        String response = scanner.nextLine();
+
+        if (response.equals("yes") || response.equals("Yes")) {
+            
+        }
+    }
+
+
 }

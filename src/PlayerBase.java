@@ -24,4 +24,30 @@ public class PlayerBase extends Base{
     public String toString() {
         return super.toString() + "\nAllegiance: Player" + "\nFood: " + food + "\nSupplies: " + supplies + "\nMoral: " +moral;
     }
+
+    public void changeIndex() {
+        System.out.print("1. Number of Soldiers\n2. Defense\n3. Food\n4. Supplies\n5. Moral\n\nWhich would you like to change?: ");
+        int response = scanner.nextInt();
+
+        if (response == 1) {
+            System.out.print("New number of soldiers: ");
+            numOfSoldiers = scanner.nextInt();
+        }
+        else if(response == 2) {
+            System.out.print("New defense: ");
+            defense = scanner.nextInt();
+        }
+        else if(response == 3) {
+            System.out.print("New food: ");
+            food = scanner.nextInt();
+        }
+        else if(response == 4) {
+            System.out.print("New supplies: ");
+            supplies = scanner.nextInt();
+        }
+        else if(response == 5) {
+            System.out.print("New moral: ");
+            defense = scanner.nextInt();
+        }
+    }
 }
